@@ -1,0 +1,39 @@
+[
+  {
+    "type": "pcb_board",
+    "pcb_board_id": "board_0",
+    "center": { "x": 0, "y": 0 },
+    "thickness": 1.4,
+    "num_layers": 2,
+    "width": 40,
+    "height": 40,
+    "outline": [
+      { "x": -20, "y": -20 },
+      { "x": 20, "y": -20 },
+      { "x": 20, "y": 20 },
+      { "x": -20, "y": 20 }
+    ]
+  },
+  {
+    "type": "pcb_component",
+    "pcb_component_id": "comp_0",
+    "center": { "x": 10, "y": 10 },
+    "width": 5,
+    "height": 5,
+    "layer": "top",
+    "rotation": 0,
+    "source_component_id": "src_0"
+  },
+  {
+    "type": "cad_component",
+    "cad_component_id": "cad_0",
+    "pcb_component_id": "comp_0",
+    "position": { "x": 10, "y": 10, "z": 0.7 },
+    "rotation": { "x": 0, "y": 0, "z": 0 },
+    "model_origin_alignment": "center_of_component_on_board_surface",
+    "anchor_alignment": "center_of_component_on_board_surface",
+    "source_component_id": "src_0",
+    "model_unit_to_mm_scale_factor": 1,
+    "model_step_url": "./test/fixtures/step/switch.step"
+  }
+]

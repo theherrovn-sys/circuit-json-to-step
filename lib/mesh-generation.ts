@@ -65,7 +65,11 @@ export async function generateComponentMeshes(
           return false
         }
 
-        if (element.type === "cad_component" && element.model_step_url) {
+        if (
+          includeExternalMeshes &&
+          element.type === "cad_component" &&
+          element.model_step_url
+        ) {
           return false
         }
 
@@ -83,11 +87,13 @@ export async function generateComponentMeshes(
         if (!includeExternalMeshes && element.type === "cad_component") {
           return {
             ...element,
+            model_step_url: undefined,
             model_3mf_url: undefined,
             model_obj_url: undefined,
             model_stl_url: undefined,
             model_glb_url: undefined,
             model_gltf_url: undefined,
+            show_as_bounding_box: true,
           }
         }
 
